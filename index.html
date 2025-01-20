@@ -10,10 +10,15 @@
     
 	<title>Kit Network</title>
 </head>
-<body onload="loadMessages();">
-<alert>Kit Network is going down for maintenance at 6:45PM Eastern Time to prepare patch 0.8.0b. Note that <strong>every account will be reset.</strong></alert>
+<body onload="loadPosts();">
+<div id="alert" style="display: none;">
+    <img class="alertImg" src="assets/img/alert.png" height="32" width="32">			
+    <a class="alertxt"></a>
+    <button class="confirmAlertButton">OK</button>
+</div>
+
 <div class="sidenav">
-    <img class="logo" src="assets/img/logo.png" height="84" width="84">  
+    <img class="logo" src="assets/img/logo.png" height="84" width="84">    
     <hr>
   <p class="currentusertxt">Signed in as <a id="currentuser">Guest</a></p>  
 <hr>
@@ -21,16 +26,9 @@
 <br>
   <div class="sidenavlist">
    <a class="white" onclick="openTab('Home')">Home</a>
+   <a class="white" id="profileSideBtn" onclick="openTab('Profile')">Profile</a>
    <a class="white" onclick="openTab('Login')">Login</a>
    <a class="white" onclick="openTab('Register')">Register</a>
-<hr>
-   <p class="white" style="width: 155px;text-align: center;">Profiles are not currently planned.
-    <br><br>
-    To sign out, reload the page. It will be fixed in a future update.
-    <br><br>
-    You'll need to sign in each visit, may be fixed in a future update
-    <br><br>
-    There is currently no displayed time for when Kits are posted. Will be added in a future update.</p>
   </div>
   <br>
   <div class="white" id="versionstring"></div>
@@ -41,21 +39,37 @@
   <div id="Home" class="tab" style="">
     <div id="content">
       <div id="postSection">
-          <h2>Send a Kit</h2>
+          <h2>Send a post</h2>
           <form id="postForm">
-              <textarea id="postinput" placeholder="You must be signed in to write a Kit" required disabled></textarea>
+              <textarea id="postinput" placeholder="You must be signed in to write a post" required disabled></textarea>
               <br>
               <br>
-              <button class="postbutton" type="submit" disabled>Kit it!</button>
+              <button class="postbutton" type="submit" disabled>Post it!</button>
           </form>
       </div>
 
           <div class="messagesection">
-          <h2>Kits</h2>
-          <div id="kitlist"><p>Loading Kits...</p></div>
+          <h2>Posts</h2>
+          <div id="postlist"><p>Loading posts...</p></div>
           </div>
    </div>
   </div>
+
+  <div id="Profile" class="tab" style="display:none;">
+    <h2>Profile Settings</h2>
+    <form id="updateProfileForm"> 
+        <label for="bio" class="bioLabelSettings">Bio:</label> 
+        <textarea style="height: 15px;" id="bio" name="bio" required></textarea><br>
+        <label for="profilePic">Profile Picture:</label> 
+        <input type="file" id="profilePic" name="profilePic" accept="image/*"><br>         
+        <button type="submit">Update Profile</button>
+        <br>
+        <hr>
+        <h1>Log out</h1>
+        <button onclick="signOut();">Sign out of account</button>
+    </form>
+</div>
+
 	
 
     <div id="Login" class="tab" style="display:none;">
@@ -71,6 +85,7 @@
 
     <div id="Register" class="tab" style="display:none;">
         <h2>Register</h2>
+        <p>Network is currently in development. The database may need to be reset again in the future. <br><strong>Make sure you have typed the right information, as it cannot be changed later on.</strong></p>
         <form id="registerForm">
             <input type="text" id="regUsername" placeholder="Username" required>
             <br>
@@ -81,6 +96,8 @@
             <button type="submit">Register</button>
         </form>
     </div>
+
+
 </div>
 <script async src="assets/js/script.js"></script>
 </body>
