@@ -1,0 +1,401 @@
+@import url(http://fonts.googleapis.com/css?family=Yanone+Kaffeesatz:400,200);
+@font-face {
+  font-family: SegoeUI;
+  src: url(../fonts/segoeuisl.ttf);
+}
+@keyframes fadeIn {
+  0% { opacity: 0; }
+  100% { opacity: 1; }
+}
+
+@-moz-keyframes fadeIn {
+  0% { opacity: 0; }
+  100% { opacity: 1; }
+}
+
+@-webkit-keyframes fadeIn {
+  0% { opacity: 0; }
+  100% { opacity: 1; }
+}
+
+@-o-keyframes fadeIn {
+  0% { opacity: 0; }
+  100% { opacity: 1; }
+}
+
+@-ms-keyframes fadeIn {
+  0% { opacity: 0; }
+  100% { opacity: 1; }
+}
+@keyframes fadeIn {
+0% { opacity: 0; }
+100% { opacity: 1; }
+}
+
+@-moz-keyframes fadeIn {
+0% { opacity: 0; }
+100% { opacity: 1; }
+}
+
+@-webkit-keyframes fadeIn {
+0% { opacity: 0; }
+100% { opacity: 1; }
+}
+
+@-o-keyframes fadeIn {
+0% { opacity: 0; }
+100% { opacity: 1; }
+}
+
+@-ms-keyframes fadeIn {
+0% { opacity: 0; }
+100% { opacity: 1; }
+}
+
+
+
+@keyframes fadeOut {
+  0% { opacity: 1; }
+  100% { opacity: 0; }
+}
+
+@-moz-keyframes fadeOut {
+  0% { opacity: 1; }
+  100% { opacity: 0; }
+}
+
+@-webkit-keyframes fadeOut {
+  0% { opacity: 1; }
+  100% { opacity: 0; }
+}
+
+@-o-keyframes fadeOut {
+  0% { opacity: 1; }
+  100% { opacity: 0; }
+}
+
+@-ms-keyframes fadeOut {
+  0% { opacity: 1; }
+  100% { opacity: 0; }
+}
+
+body {
+  background: url(../img/bg.jpg) !important;
+}
+html, body, .sidenavlist, p, div, big, marquee, h1, h2, h3, h4, button {
+  font-family: SegoeUI;
+  color: white;
+}
+input::placeholder {
+  font-family: SegoeUI;
+  color: black;
+}
+.white {
+  color: white;
+}
+::-webkit-scrollbar-track
+{
+	-webkit-box-shadow: inset 0 0 0px rgba(0,0,0,0.3);
+	border-radius: 10px;
+	background-color: transparent;
+}
+::-webkit-scrollbar
+{
+	width: 6px;
+    height: 6px;
+	background-color: transparent;
+}
+
+::-webkit-scrollbar-thumb
+{
+	border-radius: 10px;
+	-webkit-box-shadow: inset 0 0 6px rgba(0,0,0,.3);
+	background-color: #555;
+}
+
+button {
+  color: white;
+border-radius: 8px;    
+padding: 10px;
+  cursor: pointer;
+  border-radius: 5px;
+  transition: 0.2s;
+  border-radius: 5px;
+  border: 2px solid rgba(255, 255, 255, 0.2);
+  background: rgba(255, 255, 255, 0.2);
+}
+
+button:hover {
+  border: 2px solid rgba(255, 255, 255, 0.2);
+  background: rgba(255, 255, 255, 0.5);
+  transition: 0.2s;
+  color: black !important;
+}
+button:disabled {
+background-color: #383838;
+cursor: not-allowed;
+color: white !important
+}
+button:disabled:hover {
+  color: white !important
+}
+.websitetitle {
+  margin: 1px 16px;
+  color: white;
+  bottom: 9px;
+  position: relative;
+}
+body {
+    overflow:hidden;  
+}
+
+#versionstring {
+  position: absolute;
+  bottom: 2px;
+  width: 100%;
+  left: 0;
+  text-align: center;
+  font-size: 11px;
+  display: none;
+}
+#alert {
+  background-color: #81818180;
+  border: 2px solid rgba(255, 255, 255, 0.2);
+  backdrop-filter: blur(8px);
+  z-index: 999999;
+  width: fit-content;
+  right: 15px;
+  margin: 0 auto;
+  top: 14px;
+  position: absolute;
+  border-radius: 8px;
+}
+.alertImg {
+  vertical-align: middle;
+  top: 4px;
+  position: relative;
+  left: 4px;
+}
+.alertxt {
+  position: relative;
+  left: 4px;
+  top: 5px;
+}
+.confirmAlertButton {
+  float: right;
+  position: relative;
+  margin: 0 0 0 12px;
+}
+
+/* The sidebar menu */
+.sidenav {
+  width: 52vw; /* Fixed width instead of percentage */
+  height: 58px; /* Fixed height */
+  position: fixed; /* Use fixed instead of absolute for stability */
+  top: 13%; /* Fixed top position */
+  left: 50%; /* Center horizontally */
+  transform: translateX(-50%); /* Adjust horizontal centering */
+  z-index: 1;
+  overflow: hidden;
+  background: rgba(0, 0, 0, 0.250);
+  border: 2px solid rgba(0, 0, 0, 0.2);
+  backdrop-filter: blur(8px);
+  border-radius: 8px;
+  box-sizing: border-box; /* Include padding and border in width */
+}
+
+/* The navigation menu links */
+.sidenavlist a {
+  border-radius: 5px;
+  border: 2px solid rgba(255, 255, 255, 0.2);
+  background: rgba(255, 255, 255, 0.2);
+  transition: 0.1s;
+  display: inline-block; /* Use inline-block for flex items */
+  padding: 3px;
+  margin: 3px;
+  text-decoration: none;
+  min-width: 80px;
+  cursor: pointer;
+  text-align: center; /* Center text */
+  line-height: 24px;
+}
+
+.sidenavlist a:hover {
+  border-radius: 5px;
+  border: 2px solid rgba(255, 255, 255, 0.2);
+  background: rgba(255, 255, 255, 0.5);
+  transition: 0.1s;
+  color: black !important;
+}
+
+.sidenavlist {
+  background: transparent;
+  border: solid 1px transparent;
+  margin: 0px 0;
+  height: 78%;
+  overflow-y: hidden;
+  display: flex;
+  padding: 0;
+  list-style: none;
+  justify-content: center; /* Center the list items */
+  position: absolute;
+  bottom: 5px;
+  left: 65px;
+}
+
+/* Optional: Ensure hover effect works consistently */
+.sidenav a:hover {
+  color: #f1f1f1;
+}
+
+/* Style page content */
+.main {
+  height: 60%; /* Same as the width of the sidebar */
+  width: 50%;
+  margin: 0 auto;
+  position: absolute;
+  padding: 0px 10px;
+  backdrop-filter: blur(8px);
+  background: rgba(0,0,0,0.350);
+  border-radius: 8px;
+  border: 2px solid rgba(0, 0, 0, 0.2);
+  top: 50%;
+  left: 50%;
+  margin-right: -50%;
+  transform: translate(-50%, -50%);
+}
+#content {
+  flex-grow: 1; 
+  padding: 20px; 
+  overflow: hidden;
+  height: 100%;
+  bottom: 40px;
+  position: relative;
+  right: 40px;
+  width: 101%;
+  }
+  
+  #postSection, .messagesection {
+  width: 100%; 
+  padding: 20px; 
+  position: relative;
+  top: 0; 
+  left: 0; 
+  }
+  
+  .post {
+    border: 2px solid rgba(0,0,0,0.2);
+    border-radius: 8px;
+    background-color: #ffffff16;
+    color: white;
+    margin: 0 0 5px 0px;
+    width: calc(100% - 2%);
+  }
+  .post > p {
+  margin: 5px;
+  }
+  
+  .delBtn {
+      background-color: rgba(255, 0, 0, 0.5);
+  }
+  
+  .delBtn:hover {
+      background-color: red;
+      color: white !important;
+  }
+  
+  .button-container {
+    float: right;
+    position: relative;
+    bottom: 45px;
+    left: 150px;
+  }
+  .currentusertxt {
+    position: relative;
+    bottom: 76px;
+    /* left: 65px; */
+    right: 5px;
+    border: 2px solid rgba(255, 255, 255, 0.2);
+    background: rgb(255 255 255 / 20%);
+    padding: 8px;
+    width: min-content;
+    white-space: nowrap;
+    float: right;
+    border-radius: 8px;
+  }
+  form > input {
+    max-width: 150px;
+    }
+    input, textarea {
+      width: calc(100% - 3.5%);
+      padding: 10px;
+      margin: 5px 0;
+      border: 2px solid rgba(0,0,0,0.2);
+      border-radius: 8px;
+    }
+    .logo {
+      display: block;
+      margin-left: 5px;
+      top: 3px;
+      position: relative;
+      border-radius: 8px;
+      box-shadow: 0 0 20px 10px rgba(128, 0, 128, 0.5);
+      transition: box-shadow 0.3s ease-in-out;
+    }
+    #currentuser {
+      font-weight: bold;
+      text-decoration: underline;
+      }
+      #postlist {
+overflow-x: hidden;
+  height: 488px;
+  overflow-y: scroll;
+  width: 99%;
+      }
+      .profileInfo {
+        left: 5px;
+        position: relative;
+        top: 3px;
+      }
+      .username {
+        position: relative;
+  bottom: 20px;
+      }
+      .bio {
+        position: relative;
+        font-size: 12px;
+        left: calc(0% + 41px);
+        bottom: 24px;
+      }
+      .profilePicture {
+        border: 2px solid rgba(255, 255, 255, 0.2);
+        border-radius: 8px;
+      }
+    
+      
+      #profileSideBtn, #accountSideBtn {
+        display: none;
+      }
+      .bioLabelSettings {
+        bottom: 15px;
+  position: relative;
+      }
+.postContent {
+  bottom: 12px;
+  position: relative;
+  left: 8px;
+}
+.timestamp {
+  bottom: 84px;
+  position: relative;
+  float: right;
+  right: 5px;
+}
+.edit-form {
+  display: block;
+  height: 94px;
+}
+.updPostBtn, .cncledtBtn, .editPostInpt {
+  bottom: 40px;
+  position: relative;
+}
