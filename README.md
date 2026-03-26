@@ -1,4 +1,7 @@
 # Network
+
+# Network development has been put on hold, follow my active work on [Disney Mix](https://github.com/Disney-Remixed/DisneyMix).
+
 Official repository for Network.
 <br>
 
